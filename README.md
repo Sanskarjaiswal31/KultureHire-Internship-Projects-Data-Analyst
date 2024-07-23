@@ -1,4 +1,4 @@
-# KultureHire-Internship-Projects-Data-Analyst
+# KultureHire-Data-Analyst-Internship-Projects
 Stage-1: Starting with Problem Statement
 
 Framed a business problem on "Understanding Career Aspirations of Gen-Z," emphasizing the impact on employers, co-workers, businesses, families, and Gen-Z individuals.
