@@ -10,12 +10,12 @@ SELECT * FROM personalized_info;
 -- Q1: How many male have responded from India?
 
 SELECT COUNT(*) FROM personalized_info
-WHERE CurrentCountry = 'India' AND Gender = 'Male\r';
+WHERE CurrentCountry = 'India' AND Gender = 'Male';
 
 -- Q2: How many female have responded from India?
 
 SELECT COUNT(*) FROM personalized_info
-WHERE Gender = 'Female\r' AND CurrentCountry = 'India';
+WHERE Gender = 'Female' AND CurrentCountry = 'India';
 
 -- Q3: How many Gen Z are influenced by their parents in regards to their career choices from India?
 
