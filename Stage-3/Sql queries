@@ -31,7 +31,7 @@ SELECT COUNT(*)
 FROM (SELECT CareerInfluenceFactor, CurrentCountry, Gender FROM learning_aspirations
       INNER JOIN personalized_info
       ON learning_aspirations.ResponseID = personalized_info.ResponseID) AS merged
-WHERE CareerInfluenceFactor = 'My Parents' AND CurrentCountry = 'India' AND Gender = 'Female\r';
+WHERE CareerInfluenceFactor = 'My Parents' AND CurrentCountry = 'India' AND Gender = 'Female';
 
 -- Q5: How many male Gen Z are influenced by their parents in regards to their career choices from India?
 
@@ -39,7 +39,7 @@ SELECT COUNT(*)
 FROM (SELECT CareerInfluenceFactor, CurrentCountry, Gender FROM learning_aspirations
       INNER JOIN personalized_info
       ON learning_aspirations.ResponseID = personalized_info.ResponseID) AS merged
-WHERE CareerInfluenceFactor = 'My Parents' AND CurrentCountry = 'India' AND Gender = 'Male\r';
+WHERE CareerInfluenceFactor = 'My Parents' AND CurrentCountry = 'India' AND Gender = 'Male';
 
 -- Q6: How many male and female (individually display in 2 different columns but as part of the same query) Gen Z are influenced by their parents in regards to their career choices from India?
 
@@ -47,7 +47,7 @@ SELECT 'Male\r' AS gender, COUNT(*) AS count
 FROM (SELECT CareerInfluenceFactor, CurrentCountry, Gender FROM learning_aspirations
       INNER JOIN personalized_info
       ON learning_aspirations.ResponseID = personalized_info.ResponseID) AS merged
-WHERE CareerInfluenceFactor = 'My Parents' AND CurrentCountry = 'India' AND Gender = 'Male\r'
+WHERE CareerInfluenceFactor = 'My Parents' AND CurrentCountry = 'India' AND Gender = 'Male'
 
 UNION
 
@@ -55,7 +55,7 @@ SELECT 'Female\r' AS gender, COUNT(*) AS count
 FROM (SELECT CareerInfluenceFactor, CurrentCountry, Gender FROM learning_aspirations
       INNER JOIN personalized_info
       ON learning_aspirations.ResponseID = personalized_info.ResponseID) AS merged
-WHERE CareerInfluenceFactor = 'My Parents' AND CurrentCountry = 'India' AND Gender = 'Female\r';
+WHERE CareerInfluenceFactor = 'My Parents' AND CurrentCountry = 'India' AND Gender = 'Female';
 
 -- Q7: How many Gen Z are influenced by media and influencers together from India?
 
@@ -85,7 +85,7 @@ INNER JOIN
 WHERE
     CurrentCountry = 'India'
     AND (CareerInfluenceFactor = 'Social Media like LinkedIn' OR CareerInfluenceFactor = 'Influencers who had successful careers')
-    AND (Gender = 'Male\r' OR Gender = 'Female\r')
+    AND (Gender = 'Male' OR Gender = 'Female')
 GROUP BY
     CareerInfluenceFactor, Gender;
 
